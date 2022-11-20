@@ -1,0 +1,172 @@
+@import header
+@import absolute
+@import mailing
+@import information
+
+html
+    margin: 0
+    height: 100%
+body
+    margin: 0
+    overflow-y: hidden
+    overflow-x: hidden
+
+p, button, h1, h2, div, img, section, header
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+
+.whatsapp__hidden, .vk__hidden, .vkgroup__hidden, .instagram__hidden
+    width: 0px
+    height: 0px
+    position: absolute
+    left: 50%
+    top: 50%
+    background: rgba(0, 0, 0, 0.9)
+    transform: translate(-50%, -50%)
+    border-radius: 20px
+    z-index: 1
+    overflow: hidden
+    transition: 0.7s
+
+    &_active
+        width: 500px
+        height: 600px
+        transition: 0.7s
+        
+    &__form
+        margin-top: 50px
+        font-family: 'Arial',Arial,sans-serif
+        text-align: center
+        
+
+        &__legend
+            color: white
+            font-size: 37px
+            font-weight: 600
+            text-align: center
+            text-transform: uppercase
+            font-family: 'Arial',Arial,sans-serif
+
+        &__p
+            color: white
+            font-size: 20px
+
+        &__count
+            display: flex
+            justify-content: center
+
+            &_up, &_down
+                color: #fff
+                margin: 0px 15px
+                font-size: 28px
+                &:hover
+                    cursor: pointer
+            &_up
+                transform: translateY(22px)
+            &_down
+                transform: rotate(180deg) translateY(23px)
+
+            &_count
+                font-size: 22px
+                color: #fff
+
+        .margin_top
+            margin-top: 50px
+
+        .margin_bottom
+            margin-bottom: -20px
+
+        &__textarea
+            width: 360px
+            height: 50px
+            margin: 0 auto
+            max-width: 360px
+            min-width: 360px
+            min-height: 50px
+            max-height: 210px
+            background-color: rgba(0,0,0,0)
+            border: 2px solid #fff
+            color: #fff
+            border-radius: 4px
+            font-size: 17px
+            overflow: hidden
+
+        &__pradio
+            font-size: 20px
+            color: white
+            display: inline-block
+            margin-top: -10px
+
+        .error
+            color: red
+        
+        .success 
+            color: green
+
+        &__button
+            width: 200px
+            height: 55px
+            font-family: 'Arial',Arial,sans-serif
+            font-weight: 700
+            font-size: 21px
+            border-radius: 6px
+            color: #fff
+            background: rgba(0, 0, 0, 0)
+            border: 2px solid white
+            transition: 0.25s
+            position: absolute
+            bottom: 20px
+            left: 50%
+            transform: translateX(-100px)
+
+            &:hover
+                background-color: #fff
+                color: #000
+                width: 195px
+                height: 52px
+                cursor: pointer
+                transition: 0.25s
+            
+            
+.close
+    width: 40px
+    height: 40px
+    position: absolute
+    right: 10px
+    top: 10px
+    transition: 0.3s
+
+    &__span
+        margin-top: 8px
+        width: 40px
+        height: 3px
+        background-color: white
+        border-radius: 5px
+        transition: 0.7s
+
+        &_1
+            transform: rotate(45deg) translate(8px, 8px)
+
+        &_2
+            transform: rotate(135deg)
+
+    &:hover
+        transform: rotate(180deg)
+        transition: 0.3s
+        cursor: pointer
+
+        .close__span
+            animation: close_animation linear 1.5s infinite
+
+
+@keyframes close_animation 
+
+    0%
+        background-color: #fff
+
+    50%
+        background-color: #fff700
+
+    100%
+        background-color: #fff
