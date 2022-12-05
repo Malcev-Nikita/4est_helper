@@ -122,11 +122,9 @@
 }
 .button div span {
   display: block;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transform: translateZ(0);
-  -webkit-animation: var(--name, none) 0.7s linear forwards 0.18s;
-          animation: var(--name, none) 0.7s linear forwards 0.18s;
+  animation: var(--name, none) 0.7s linear forwards 0.18s;
 }
 .button.in:not(.out) {
   --c: var(--color-hover);
@@ -167,7 +165,7 @@ p, button, h1, h2, div, img, section, header {
   -ms-user-select: none;
 }
 
-.whatsapp__hidden, .vk__hidden, .vkgroup__hidden, .instagram__hidden {
+.whatsapp__hidden, .vkgroup__hidden, .information__hidden {
   width: 0px;
   height: 0px;
   position: absolute;
@@ -180,17 +178,34 @@ p, button, h1, h2, div, img, section, header {
   overflow: hidden;
   transition: 0.7s;
 }
-.whatsapp__hidden_active, .vk__hidden_active, .vkgroup__hidden_active, .instagram__hidden_active {
+.whatsapp__hidden_active, .vkgroup__hidden_active, .information__hidden_active {
   width: 500px;
   height: 600px;
   transition: 0.7s;
 }
-.whatsapp__hidden__form, .vk__hidden__form, .vkgroup__hidden__form, .instagram__hidden__form {
+.whatsapp__hidden__form, .whatsapp__hidden__content, .vkgroup__hidden__form, .vkgroup__hidden__content, .information__hidden__form, .information__hidden__content {
   margin-top: 50px;
   font-family: "Arial", Arial, sans-serif;
   text-align: center;
 }
-.whatsapp__hidden__form__legend, .vk__hidden__form__legend, .vkgroup__hidden__form__legend, .instagram__hidden__form__legend {
+.whatsapp__hidden__form li, .whatsapp__hidden__content li, .vkgroup__hidden__form li, .vkgroup__hidden__content li, .information__hidden__form li, .information__hidden__content li {
+  text-align: left;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  line-height: 30px;
+}
+.whatsapp__hidden__form li a, .whatsapp__hidden__content li a, .vkgroup__hidden__form li a, .vkgroup__hidden__content li a, .information__hidden__form li a, .information__hidden__content li a {
+  outline: none;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 2px;
+  line-height: 30px;
+}
+.whatsapp__hidden__form__legend, .whatsapp__hidden__form__header, .whatsapp__hidden__content__legend, .whatsapp__hidden__content__header, .vkgroup__hidden__form__legend, .vkgroup__hidden__form__header, .vkgroup__hidden__content__legend, .vkgroup__hidden__content__header, .information__hidden__form__legend, .information__hidden__form__header, .information__hidden__content__legend, .information__hidden__content__header {
   color: white;
   font-size: 37px;
   font-weight: 600;
@@ -198,39 +213,42 @@ p, button, h1, h2, div, img, section, header {
   text-transform: uppercase;
   font-family: "Arial", Arial, sans-serif;
 }
-.whatsapp__hidden__form__p, .vk__hidden__form__p, .vkgroup__hidden__form__p, .instagram__hidden__form__p {
+.whatsapp__hidden__form__header, .whatsapp__hidden__content__header, .vkgroup__hidden__form__header, .vkgroup__hidden__content__header, .information__hidden__form__header, .information__hidden__content__header {
+  font-size: 28px;
+}
+.whatsapp__hidden__form__p, .whatsapp__hidden__content__p, .vkgroup__hidden__form__p, .vkgroup__hidden__content__p, .information__hidden__form__p, .information__hidden__content__p {
   color: white;
   font-size: 20px;
 }
-.whatsapp__hidden__form__count, .vk__hidden__form__count, .vkgroup__hidden__form__count, .instagram__hidden__form__count {
+.whatsapp__hidden__form__count, .whatsapp__hidden__content__count, .vkgroup__hidden__form__count, .vkgroup__hidden__content__count, .information__hidden__form__count, .information__hidden__content__count {
   display: flex;
   justify-content: center;
 }
-.whatsapp__hidden__form__count_up, .whatsapp__hidden__form__count_down, .vk__hidden__form__count_up, .vk__hidden__form__count_down, .vkgroup__hidden__form__count_up, .vkgroup__hidden__form__count_down, .instagram__hidden__form__count_up, .instagram__hidden__form__count_down {
+.whatsapp__hidden__form__count_up, .whatsapp__hidden__form__count_down, .whatsapp__hidden__content__count_up, .whatsapp__hidden__content__count_down, .vkgroup__hidden__form__count_up, .vkgroup__hidden__form__count_down, .vkgroup__hidden__content__count_up, .vkgroup__hidden__content__count_down, .information__hidden__form__count_up, .information__hidden__form__count_down, .information__hidden__content__count_up, .information__hidden__content__count_down {
   color: #fff;
   margin: 0px 15px;
   font-size: 28px;
 }
-.whatsapp__hidden__form__count_up:hover, .whatsapp__hidden__form__count_down:hover, .vk__hidden__form__count_up:hover, .vk__hidden__form__count_down:hover, .vkgroup__hidden__form__count_up:hover, .vkgroup__hidden__form__count_down:hover, .instagram__hidden__form__count_up:hover, .instagram__hidden__form__count_down:hover {
+.whatsapp__hidden__form__count_up:hover, .whatsapp__hidden__form__count_down:hover, .whatsapp__hidden__content__count_up:hover, .whatsapp__hidden__content__count_down:hover, .vkgroup__hidden__form__count_up:hover, .vkgroup__hidden__form__count_down:hover, .vkgroup__hidden__content__count_up:hover, .vkgroup__hidden__content__count_down:hover, .information__hidden__form__count_up:hover, .information__hidden__form__count_down:hover, .information__hidden__content__count_up:hover, .information__hidden__content__count_down:hover {
   cursor: pointer;
 }
-.whatsapp__hidden__form__count_up, .vk__hidden__form__count_up, .vkgroup__hidden__form__count_up, .instagram__hidden__form__count_up {
+.whatsapp__hidden__form__count_up, .whatsapp__hidden__content__count_up, .vkgroup__hidden__form__count_up, .vkgroup__hidden__content__count_up, .information__hidden__form__count_up, .information__hidden__content__count_up {
   transform: translateY(22px);
 }
-.whatsapp__hidden__form__count_down, .vk__hidden__form__count_down, .vkgroup__hidden__form__count_down, .instagram__hidden__form__count_down {
+.whatsapp__hidden__form__count_down, .whatsapp__hidden__content__count_down, .vkgroup__hidden__form__count_down, .vkgroup__hidden__content__count_down, .information__hidden__form__count_down, .information__hidden__content__count_down {
   transform: rotate(180deg) translateY(23px);
 }
-.whatsapp__hidden__form__count_count, .vk__hidden__form__count_count, .vkgroup__hidden__form__count_count, .instagram__hidden__form__count_count {
+.whatsapp__hidden__form__count_count, .whatsapp__hidden__content__count_count, .vkgroup__hidden__form__count_count, .vkgroup__hidden__content__count_count, .information__hidden__form__count_count, .information__hidden__content__count_count {
   font-size: 22px;
   color: #fff;
 }
-.whatsapp__hidden__form .margin_top, .vk__hidden__form .margin_top, .vkgroup__hidden__form .margin_top, .instagram__hidden__form .margin_top {
+.whatsapp__hidden__form .margin_top, .whatsapp__hidden__content .margin_top, .vkgroup__hidden__form .margin_top, .vkgroup__hidden__content .margin_top, .information__hidden__form .margin_top, .information__hidden__content .margin_top {
   margin-top: 50px;
 }
-.whatsapp__hidden__form .margin_bottom, .vk__hidden__form .margin_bottom, .vkgroup__hidden__form .margin_bottom, .instagram__hidden__form .margin_bottom {
+.whatsapp__hidden__form .margin_bottom, .whatsapp__hidden__content .margin_bottom, .vkgroup__hidden__form .margin_bottom, .vkgroup__hidden__content .margin_bottom, .information__hidden__form .margin_bottom, .information__hidden__content .margin_bottom {
   margin-bottom: -20px;
 }
-.whatsapp__hidden__form__textarea, .vk__hidden__form__textarea, .vkgroup__hidden__form__textarea, .instagram__hidden__form__textarea {
+.whatsapp__hidden__form__textarea, .whatsapp__hidden__content__textarea, .vkgroup__hidden__form__textarea, .vkgroup__hidden__content__textarea, .information__hidden__form__textarea, .information__hidden__content__textarea {
   width: 360px;
   height: 50px;
   margin: 0 auto;
@@ -245,19 +263,19 @@ p, button, h1, h2, div, img, section, header {
   font-size: 17px;
   overflow: hidden;
 }
-.whatsapp__hidden__form__pradio, .vk__hidden__form__pradio, .vkgroup__hidden__form__pradio, .instagram__hidden__form__pradio {
+.whatsapp__hidden__form__pradio, .whatsapp__hidden__content__pradio, .vkgroup__hidden__form__pradio, .vkgroup__hidden__content__pradio, .information__hidden__form__pradio, .information__hidden__content__pradio {
   font-size: 20px;
   color: white;
   display: inline-block;
   margin-top: -10px;
 }
-.whatsapp__hidden__form .error, .vk__hidden__form .error, .vkgroup__hidden__form .error, .instagram__hidden__form .error {
+.whatsapp__hidden__form .error, .whatsapp__hidden__content .error, .vkgroup__hidden__form .error, .vkgroup__hidden__content .error, .information__hidden__form .error, .information__hidden__content .error {
   color: red;
 }
-.whatsapp__hidden__form .success, .vk__hidden__form .success, .vkgroup__hidden__form .success, .instagram__hidden__form .success {
+.whatsapp__hidden__form .success, .whatsapp__hidden__content .success, .vkgroup__hidden__form .success, .vkgroup__hidden__content .success, .information__hidden__form .success, .information__hidden__content .success {
   color: green;
 }
-.whatsapp__hidden__form__button, .vk__hidden__form__button, .vkgroup__hidden__form__button, .instagram__hidden__form__button {
+.whatsapp__hidden__form__button, .whatsapp__hidden__content__button, .vkgroup__hidden__form__button, .vkgroup__hidden__content__button, .information__hidden__form__button, .information__hidden__content__button {
   width: 200px;
   height: 55px;
   font-family: "Arial", Arial, sans-serif;
@@ -273,7 +291,7 @@ p, button, h1, h2, div, img, section, header {
   left: 50%;
   transform: translateX(-100px);
 }
-.whatsapp__hidden__form__button:hover, .vk__hidden__form__button:hover, .vkgroup__hidden__form__button:hover, .instagram__hidden__form__button:hover {
+.whatsapp__hidden__form__button:hover, .whatsapp__hidden__content__button:hover, .vkgroup__hidden__form__button:hover, .vkgroup__hidden__content__button:hover, .information__hidden__form__button:hover, .information__hidden__content__button:hover {
   background-color: #fff;
   color: #000;
   width: 195px;
@@ -310,20 +328,7 @@ p, button, h1, h2, div, img, section, header {
   cursor: pointer;
 }
 .close:hover .close__span {
-  -webkit-animation: close_animation linear 1.5s infinite;
-          animation: close_animation linear 1.5s infinite;
-}
-
-@-webkit-keyframes close_animation {
-  0% {
-    background-color: #fff;
-  }
-  50% {
-    background-color: #fff700;
-  }
-  100% {
-    background-color: #fff;
-  }
+  animation: close_animation linear 1.5s infinite;
 }
 
 @keyframes close_animation {

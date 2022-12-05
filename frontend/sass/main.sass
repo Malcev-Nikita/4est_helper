@@ -17,7 +17,7 @@ p, button, h1, h2, div, img, section, header
     -moz-user-select: none
     -ms-user-select: none
 
-.whatsapp__hidden, .vk__hidden, .vkgroup__hidden, .instagram__hidden
+.whatsapp__hidden, .vkgroup__hidden, .information__hidden
     width: 0px
     height: 0px
     position: absolute
@@ -35,19 +35,39 @@ p, button, h1, h2, div, img, section, header
         height: 600px
         transition: 0.7s
         
-    &__form
+    &__form, &__content
+        
         margin-top: 50px
         font-family: 'Arial',Arial,sans-serif
         text-align: center
         
+        li
+            text-align: left
+            color: white
+            font-size: 14px
+            letter-spacing: 2px
+            font-weight: 500
+            line-height: 30px
+            a
+                outline: none
+                text-decoration: none
+                color: white
+                font-weight: 700
+                font-size: 16px
+                letter-spacing: 2px
+                line-height: 30px
 
-        &__legend
+
+        &__legend, &__header
             color: white
             font-size: 37px
             font-weight: 600
             text-align: center
             text-transform: uppercase
             font-family: 'Arial',Arial,sans-serif
+
+        &__header
+            font-size: 28px
 
         &__p
             color: white
