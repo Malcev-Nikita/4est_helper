@@ -188,23 +188,6 @@ p, button, h1, h2, div, img, section, header {
   font-family: "Arial", Arial, sans-serif;
   text-align: center;
 }
-.whatsapp__hidden__form li, .whatsapp__hidden__content li, .vkgroup__hidden__form li, .vkgroup__hidden__content li, .information__hidden__form li, .information__hidden__content li {
-  text-align: left;
-  color: white;
-  font-size: 14px;
-  letter-spacing: 2px;
-  font-weight: 500;
-  line-height: 30px;
-}
-.whatsapp__hidden__form li a, .whatsapp__hidden__content li a, .vkgroup__hidden__form li a, .vkgroup__hidden__content li a, .information__hidden__form li a, .information__hidden__content li a {
-  outline: none;
-  text-decoration: none;
-  color: white;
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 2px;
-  line-height: 30px;
-}
 .whatsapp__hidden__form__legend, .whatsapp__hidden__form__header, .whatsapp__hidden__content__legend, .whatsapp__hidden__content__header, .vkgroup__hidden__form__legend, .vkgroup__hidden__form__header, .vkgroup__hidden__content__legend, .vkgroup__hidden__content__header, .information__hidden__form__legend, .information__hidden__form__header, .information__hidden__content__legend, .information__hidden__content__header {
   color: white;
   font-size: 37px;
@@ -329,6 +312,18 @@ p, button, h1, h2, div, img, section, header {
 }
 .close:hover .close__span {
   animation: close_animation linear 1.5s infinite;
+}
+
+.sites {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: calc(100% - 50px);
+}
+.sites .site {
+  height: 60px;
+  width: 100px;
+  cursor: pointer;
+  margin: 20px 10px;
 }
 
 @keyframes close_animation {

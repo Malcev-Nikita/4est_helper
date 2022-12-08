@@ -36,27 +36,9 @@ p, button, h1, h2, div, img, section, header
         transition: 0.7s
         
     &__form, &__content
-        
         margin-top: 50px
         font-family: 'Arial',Arial,sans-serif
         text-align: center
-        
-        li
-            text-align: left
-            color: white
-            font-size: 14px
-            letter-spacing: 2px
-            font-weight: 500
-            line-height: 30px
-            a
-                outline: none
-                text-decoration: none
-                color: white
-                font-weight: 700
-                font-size: 16px
-                letter-spacing: 2px
-                line-height: 30px
-
 
         &__legend, &__header
             color: white
@@ -179,6 +161,17 @@ p, button, h1, h2, div, img, section, header
 
         .close__span
             animation: close_animation linear 1.5s infinite
+
+.sites
+    margin: 0 auto
+    margin-top: 50px
+    width: calc( 100% - 50px )
+
+    .site
+        height: 60px
+        width: 100px
+        cursor: pointer
+        margin: 20px 10px
 
 
 @keyframes close_animation 
