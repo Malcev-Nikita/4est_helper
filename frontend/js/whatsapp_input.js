@@ -37,9 +37,6 @@ let whatsapp__hidden__form__button = document.getElementsByClassName("whatsapp__
 
 whatsapp__hidden__form__button.addEventListener("click", function () 
 {
-    console.log(whatsapp__hidden__form__count_count.textContent)
-    console.log(typeof(whatsapp__hidden__form__count_count.value))
-
     eel.whatsapp_mailing(Number(whatsapp__hidden__form__count_count.textContent), 
                          whatsapp__hidden__form__textarea.value)
 })
