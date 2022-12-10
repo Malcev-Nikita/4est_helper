@@ -7,12 +7,12 @@ session_group = vk_api.VkApi(token=API_GROUP)
 
 def vk_group_send_messages(message):  
     
-    users = select_users()
+    # users = select_users()
 
-    for user in users:
-        session_group.method("messages.send", {"user_id": user,
-                                               "random_id": get_random_id(),
-                                               "message": message})
+    # for user in users:
+    session_group.method("messages.send", {"user_id": "622898009",
+                                            "random_id": get_random_id(),
+                                            "message": message})
 
 
 def select_users():
